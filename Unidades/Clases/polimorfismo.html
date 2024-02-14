@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	    <meta charset="UTF-8">
+    <title>Unidad 1</title>
+    <link rel="icon" href="../../Imagenes/Sistemas.ico">
+    <link rel="stylesheet" type="text/css" href="estiloClases.css">
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="../../Imagenes/UNC.png" alt="UNC">
+            <h1>UNC</h1>
+            <img class="logo" src="../../Imagenes/Sistemas.png" alt="Sistemas">
+        </div>
+    </nav>
+    <h2>Algoritmos y estructura de datos</h2>
+    <h3>Ingeniería de Sistemas</h3>
+    <h4>Grupo 6</h4>
+</header>
+
+<!-- Contenedor principal -->
+<div class="container">
+
+    <!-- Enlaces de navegación -->
+    <aside>
+        <a href="../unidad2.html">Volver</a><br><br><br>
+        <h1 class="black-title">POLIMORFISMO</h1><br>
+        <a href="#ejercicio1">Ejercicio 1</a><br>
+        <a href="#ejercicio2">Ejercicio 2</a><br>
+        <a href="#ejercicio3">Ejercicio 3</a><br><br>
+    </aside>
+
+		<h3><b>Introducción a Polimorfismo en la UNC:</b></h3>
+<br>
+
+En el desarrollo de software, el polimorfismo emerge como un concepto clave, desempeñando un papel significativo en la Universidad Nacional de Cajamarca (UNC), donde la flexibilidad y adaptabilidad de los sistemas informáticos son esenciales para abordar las complejidades académicas y administrativas.<br>
+<br>
+El polimorfismo es un principio de la programación orientada a objetos que permite a objetos de diferentes clases responder a un mismo mensaje o método de manera distinta. En el entorno de la UNC, donde la diversidad de roles y funciones en la gestión académica y administrativa es notable, el polimorfismo facilita la creación de sistemas informáticos versátiles y capaces de adaptarse a diversas situaciones.<br>
+<br>
+El polimorfismo en la UNC se traduce en la capacidad de los sistemas informáticos para manejar entidades diversas de manera uniforme. Por ejemplo, en aplicaciones académicas, el polimorfismo podría permitir que distintos tipos de usuarios accedan a funciones comunes, como la búsqueda de información, a pesar de sus roles específicos.<br>
+<br>
+En la UNC, el polimorfismo se utiliza estratégicamente para mejorar la modularidad y extensibilidad del código, permitiendo que los sistemas informáticos se ajusten a la dinámica y diversidad de las actividades académicas y administrativas. Esta flexibilidad contribuye a la eficiencia y adaptabilidad de las aplicaciones desarrolladas en la universidad.<br>
+
+<br>
+<br>
+	</p><br><br>
+    <div id="ejercicio1">
+        <h3><b>Ejercicio 1: </b></h3>
+        <p>
+ 
+ 
+<h3><b>Clase Padre:</b></h3>
+<br>
+<br>
+
+package polimorfism;<br>
+public abstract class cuenta {<br>
+	<br>
+	public String númeroCuenta;<br>
+	public double saldo;<br>
+	public String titular;<br>
+	<br>
+	public abstract double Calcularinterés();<br>
+}<br>
+
+<br>
+<h3><b>Clase Hija 1:</b></h3>
+<br>
+
+package polimorfism;<br>
+public class CuentaPlazoFijo extends cuenta {<br>
+	@Override<br>
+	public double Calcularinterés() {<br>
+		// TODO Auto-generated method stub<br>
+		return this.saldo*0.1;<br>
+	}<br>
+	<br>
+}<br>
+<br>
+<h3><b>Clase Hija 2:</b></h3>
+<br> 
+package polimorfism;<br>
+public class CuentaAhorro extends cuenta{<br>
+	@Override<br>
+	public double Calcularinterés() {<br>
+		// TODO Auto-generated method stub<br>
+		return this.saldo *0.05;<br>
+	}<br>
+	
+}<br>
+<br>
+<h3><b>Clase Main:</b></h3>
+<br>
+package polimorfism;<br>
+public class MainP {<br>
+	public static void main(String[] args) {// Se crea instansias<br>
+		// TODO Auto-generated method stub<br>
+		CuentaAhorro ca=new CuentaAhorro();<br>
+		ca.saldo=5000;<br>
+		System.out.println(ca.Calcularinterés());<br>
+		<br>
+		CuentaPlazoFijo cpf=new CuentaPlazoFijo();<br>
+		cpf.saldo=5000;<br>
+		System.out.println(cpf.Calcularinterés());<br>
+	<br>
+	}<br>
+}<br>
+<br>
+<br>
+        </p>
+       <h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/Polimorfismo1.jpg " alt="Resultado">
+        <br><br>
+        <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaPolimorfismo1.jpg " alt="Diagrama">
+    </div>
+
+
+
+
+     <div id="ejercicio1">	
+			<h3 id="ejercicio2"><b>Ejercicio 2: </b></h3>
+				<p>   
+			<h3><b>Clase Padre Abstracta:</b></h3>
+<br>
+<br>
+package polimorfism;<br>
+public 	class Figura {<br>
+	<br>
+	protected double area;<br>
+	protected double perimetro;<br>
+}<br>
+<br>
+
+<br>
+<h3><b>Clase Padre Interfaz:</b></h3>
+<br>
+<br>
+package polimorfism;<br>
+public interface IFigura {<br>
+	 void calculaArea();<br>
+	 void calculaPerimetro();<br>
+	double getArea();<br>
+	double getPerimetro();<br>
+	String getNombre();<br>
+}<br>
+
+
+<br>
+<h3><b>Clase Hija 1:</b></h3>
+<br> 
+package polimorfism;<br>
+public class Circulo extends Figura implements IFigura {<br>
+	private double radio; //Especifico de circulo<br>
+	//Constructor<br>
+	public Circulo(double radio) {<br>
+		super();<br>
+		this.radio = radio;<br>
+	}<br>
+	@Override<br>
+	public void calculaArea() {<br>
+		// TODO Auto-generated method stub<br>
+		area = Math.PI*radio*radio;<br>
+	}<br>
+	@Override<br>
+	public void calculaPerimetro() {<br>
+		// TODO Auto-generated method stub<br>
+		perimetro = 2.0 * Math.PI*radio;<br>
+	}<br>
+	@Override<br>
+	public double getArea() {<br>
+		// TODO Auto-generated method stub<br>
+		return area;<br>
+	}<br>
+	@Override<br>
+	public double getPerimetro() {<br>
+		// TODO Auto-generated method stub<br>
+		return perimetro;<br>
+	}<br>
+	public String getNombre() {<br>
+		// TODO Auto-generated method stub<br>
+		return "Circulo";<br>
+}<br>
+}<br>
+<br>
+<br>
+<h3><b>Clase Hija 2:</b></h3>
+<br> 
+package polimorfism;<br>
+public class Triangulo extends Figura implements IFigura{<br>
+	<br>
+	private double base ;<br>
+	private double altura ;<br>
+	private double a,b,c ;<br>
+	<br>
+	//Constructor<br>
+	public Triangulo(double base, double altura, double a, double b, double c) {<br>
+		super();<br>
+		this.base = base;<br>
+		this.altura = altura;<br>
+		this.a = a;<br>
+		this.b = b;<br>
+		this.c = c;<br>
+	}<br>
+	<br>
+	@Override<br>
+	public void calculaArea() {<br>
+		// TODO Auto-generated method stub<br>
+		area = base * altura / 2;<br>
+	}<br>
+	<br>
+	@Override<br>
+	public void calculaPerimetro() {<br>
+		// TODO Auto-generated method stub<br>
+		perimetro = a+b+c;<br>
+	}<br>
+	@Override<br>
+	public double getArea() {<br>
+		// TODO Auto-generated method stub<br>
+		return area;<br>
+	}<br>
+	@Override<br>
+	public double getPerimetro() {<br>
+		// TODO Auto-generated method stub<br>
+		return perimetro;<br>
+	}<br>
+	@Override<br>
+	public String getNombre() {<br>
+		// TODO Auto-generated method stub<br>
+		return "Triangulo";<br>
+}<br>
+}<br>
+	
+<br>
+<br>
+<h3><b>Clase Main:</b></h3>
+<br>
+package polimorfism;<br>
+public class MainF {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		IFigura figura[]=new IFigura[5];<br>
+		figura[0]=new Circulo(1.0);<br>
+		figura[1]=new Triangulo(1.0,2.0,1.0,2.0,3.0);<br>
+		figura[2]=new Circulo(2.0);<br>
+		figura[3]=new Triangulo(2.0,3.0,4.0,4.0,4.0);<br>
+		figura[4]=new Circulo(1.0);<br>
+		<br>
+		<br>
+		for (IFigura i:figura)<br>
+		{<br>
+			i.calculaArea();<br>
+			i.calculaPerimetro();<br>
+			System.out.println(i.getNombre());<br>
+			System.out.println("Area: "+i.getArea());<br>
+			System.out.println("Perímetro: "+i.getPerimetro());<br>
+			System.out.println();<br>
+		}<br>
+		<br>
+	}<br>
+}<br>
+
+<br>
+<br>	
+				</p>
+				<h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/Polimorfismo2.jpg " alt="Resultado">
+        <br><br>
+        <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaPolimorfismo2.jpg " alt="Diagrama">
+
+    </div>
+
+     <div id="ejercicio1">
+			<h3 id="ejercicio3"><b>Ejercicio 3: </b></h3>
+				<p>   
+<h3><b>Clase Padre Absracta:</b></h3>
+<br>
+<br>
+package polimorfism;<br>
+public abstract class Animales {<br>
+	protected int edad;<br>
+	protected String salud;<br>
+	protected String salud1;<br>
+	protected String Nombre;<br>
+	<br>
+	protected abstract void calculaSalud();<br>
+}<br>
+
+
+<br>
+<h3><b>Clase Padre Interfaz:</b></h3>
+<br>
+package polimorfism;<br>
+public interface IAnimales {<br>
+	 void calculaSalud();<br>
+	 void calculaEdad();<br>
+	 void calculaNombre();<br>
+	String getSalud();<br>
+	double getEdad();<br>
+	String getNombre();<br>
+}<br>
+
+
+<br>
+<h3><b>Clase Hija 1:</b></h3>
+<br> 
+public class AnimalesCaseros extends Animales  {<br>
+	private String vacunas;<br>
+	<br>
+	public AnimalesCaseros(String vacunas) {<br>
+		// TODO Auto-generated constructor stub<br>
+		this.vacunas = vacunas;<br>
+	}<br>
+	@Override<br>
+	public void calculaSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		<br>
+		if (vacunas == "si") {<br>
+		    salud1 = " °°Bien Hecho, tu mascota tiene todas sus vacunas °° ";<br>
+		}<br><br>
+				else {<br>
+			salud1 = " °°Muy Mal, falta que lo vacunen°° ";<br>
+		}<br>
+	}<br>
+	<br>
+	public String getSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		return salud1;<br>
+	}<br>
+}<br>
+
+		<br>
+		<br>
+
+<h3><b>Clase SubHija 1:</b></h3>
+<br> 
+package polimorfism;<br>
+public class Perro extends Animales implements IAnimales{<br>
+	private String nombre;<br>
+	private int Edad;<br>
+	private double peso;<br>
+	<br>
+	public Perro(String nombre, int Edad, double peso) {<br>
+		// TODO Auto-generated constructor stub<br>
+		this.nombre = nombre;<br>
+		this.Edad = Edad;<br>
+		this.peso = peso;<br>
+		<br>
+	}<br>
+	@Override<br>
+	public void calculaSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		if (peso >= 13 && peso <= 35) {<br>
+		 salud = " Tu perr@ esta en buen estado de peso :) ";<br>
+		}<br>
+		else {<br>
+			salud = " Estas siendo descudad@ con el peso de tu perr@ :( ";<br>
+		}	<br>
+	}<br>
+	
+	@Override<br>
+	public void calculaEdad() {<br>
+		// TODO Auto-generated method stub<br>
+		<br>
+		edad = Edad*7;<br>
+		<br>
+	}<br>
+	@Override<br>
+	public void calculaNombre() {<br>
+		// TODO Auto-generated method stub<br>
+			Nombre = "es una bonita mascota: "+ nombre;<br>
+		<br>
+	}<br>
+	
+	<br>
+	<br>
+	@Override<br>
+	public String getSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		return salud;<br>
+	}<br>
+	@Override<br>
+	public double getEdad() {<br>
+		// TODO Auto-generated method stub<br>
+		return edad;<br>
+	}<br>
+	@Override<br>
+	public String getNombre() {<br>
+		// TODO Auto-generated method stub<br>
+		return Nombre;<br>
+	}<br>
+	<br>
+}<br>
+<br>
+<br>
+<h3><b>Clase SubHija 2:</b></h3>
+<br> 
+	package polimorfism;<br>
+public class Gato extends Animales implements IAnimales{<br>
+	<br>
+	private String nombre;<br>
+	private int Edad;<br>
+	private double peso;<br>
+	<br>
+	public Gato(String nombre, int Edad, double peso) {<br>
+		// TODO Auto-generated constructor stub<br>
+		this.nombre = nombre;<br>
+		this.Edad = Edad;<br>
+		this.peso = peso;<br>
+	}<br>
+	<br>
+	@Override<br>
+	public void calculaSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		if (peso >= 2 && peso <= 5) {<br>
+		 salud = " Tu gat@ esta en buen estado de peso :) ";<br>
+		}<br>
+		else {<br>
+			salud = " Estas siendo descudad@ con el peso de tu gat@ :( ";<br>
+		}<br>
+	}<br>
+	@Override<br>
+	public void calculaEdad() {<br>
+		// TODO Auto-generated method stub<br>
+		<br>
+		edad = Edad*5;<br>
+		
+		<br>
+	}<br>
+	@Override<br>
+	public void calculaNombre() {<br>
+		// TODO Auto-generated method stub<br>
+			Nombre = "es una bonita mascota: "+ nombre;<br>
+		<br>
+	}<br>
+	
+	
+	<br>
+	
+	
+	@Override<br>
+	public String getSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		return salud;<br>
+	}<br>
+	@Override<br>
+	public double getEdad() {<br>
+		// TODO Auto-generated method stub<br>
+		return edad;<br>
+	}<br>
+	@Override<br>
+	public String getNombre() {<br>
+		// TODO Auto-generated method stub<br>
+		return Nombre;<br>
+	}<br>
+	
+}<br>
+<br>
+<br>
+<h3><b>Clase Hija 2:</b></h3>
+<br> 
+		package polimorfism;<br>
+public class AnimalesGranja extends Animales {<br>
+private String vacunas;<br>
+	<br>
+public AnimalesGranja (String vacunas) {<br>
+	// TODO Auto-generated constructor stub<br>
+	this.vacunas = vacunas;<br>
+}<br>
+	@Override<br>
+	public void calculaSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		<br>
+		if (vacunas == "si") {<br>
+		    salud1 = " °°Bien Hecho, tu mascota tiene todas sus vacunas°° ";<br>
+		}<br>
+		else {<br>
+			salud1 = " °°Muy Mal, falta que lo vacunen°° ";<br>
+		}<br>
+	}<br>
+	<br>
+	public String getSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		return salud1;<br>
+	}<br>
+}<br>
+<br>
+<br>
+<h3><b>Clase SubHija 1:</b></h3>
+<br> 
+	package polimorfism;<br>
+public class Vaca  extends Animales implements IAnimales{<br>
+	<br>
+	private String nombre;<br>
+	private int Edad;<br>
+	private double peso;<br>
+	<br>
+	public Vaca(String nombre, int Edad, double peso) {<br>
+		// TODO Auto-generated constructor stub<br>
+		this.nombre = nombre;<br>
+		this.Edad = Edad;<br>
+		this.peso = peso;<br>
+		
+	}<br>
+	@Override<br>
+	public void calculaSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		if (peso >= 500 && peso <= 850) {<br>
+		 salud = " Tu Vaca esta en buen estado de peso :) ";<br>
+		}<br>
+		else {<br>
+			salud = " Estas siendo descudad@ con el peso de tu vaca :( ";<br>
+		}<br>
+		
+	}<br>
+	@Override<br>
+	public void calculaEdad() {<br>
+		// TODO Auto-generated method stub<br>
+		<br>
+		edad = Edad*3;<br>
+		<br>
+	}<br>
+	@Override<br>
+	public void calculaNombre() {<br>
+		// TODO Auto-generated method stub<br>
+			Nombre = "es una bonita mascota: "+ nombre;<br>
+	}<br>
+	<br>
+	
+	
+	
+	@Override<br>
+	public String getSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		return salud;<br>
+	}<br>
+	@Override<br>
+	public double getEdad() {<br>
+		// TODO Auto-generated method stub<br>
+		return edad;<br>
+	}<br>
+	@Override<br>
+	public String getNombre() {<br>
+		// TODO Auto-generated method stub<br>
+		return Nombre;<br>
+	}<br>
+}<br>
+
+<br>
+<br>
+<h3><b>Clase SubHija 2:</b></h3>
+<br> 
+	package polimorfism;<<br>
+public class Pollo extends Animales implements IAnimales {<<br>
+	<<br>
+	private String nombre;<<br>
+	private int Edad;<<br>
+	private double peso;<<br>
+	<<br>
+	public Pollo (String nombre, int Edad, double peso) {<<br>
+		// TODO Auto-generated constructor stub<<br>
+		this.nombre = nombre;<<br>
+		this.Edad = Edad;<<br>
+		this.peso = peso;<<br>
+		<<br>
+	}<<br>
+	public void calculaSalud() {<<br>
+		// TODO Auto-generated method stub<<br>
+		if (peso >= 2 && peso <= 5) {<<br>
+		 salud = " Tu pollo esta en buen estado de peso :) ";<<br>
+		}<<br>
+		else {<<br>
+		salud = " Estas siendo descudad@ con el peso de tu pollo :( ";<<br>
+		}	<<br>
+	}<<br>
+	@Override<<br>
+	public void calculaEdad() {<<br>
+		// TODO Auto-generated method stub<<br>
+		<<br>
+		edad = Edad*12;<<br>
+		<<br>
+	}<<br>
+	@Override<<br>
+	public void calculaNombre() {<<br>
+		// TODO Auto-generated method stub<<br>
+			Nombre = "es una bonita mascota: "+ nombre;<<br>
+	}<<br>
+	<<br>
+	<br>
+	@Override<br>
+	public String getSalud() {<br>
+		// TODO Auto-generated method stub<br>
+		return salud;<br>
+	}<br>
+	@Override<br>
+	public double getEdad() {<br>
+		// TODO Auto-generated method stub<br>
+		return edad;<br>
+	}<br>
+	@Override<br>
+	public String getNombre() {<br>
+		// TODO Auto-generated method stub<br>
+		return Nombre;<br>
+	}<br>
+}<br>
+
+<br>
+<br>
+<h3><b>Clase Main:</b></h3>
+<br>
+package polimorfism;<br>
+public class MainAnimales {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		AnimalesCaseros dog1 = new AnimalesCaseros("si");<br>
+		dog1.calculaSalud();<br>
+		System.out.println(dog1.getSalud());<br>
+		<br>
+		Perro dog = new Perro("Yosmer",4,30.0);<br>
+		dog.calculaSalud();<br>
+		dog.calculaEdad();<br>
+		dog.calculaNombre();<br>
+		<br>
+		System.out.println(dog.getSalud());<br>
+		System.out.println("Su mascota tiene: "+dog.getEdad()+" años de edad°°");<br>
+		System.out.println(dog.getNombre());<br>
+		System.out.println("");<br>
+		System.out.println("");<br>
+		<br>
+		AnimalesCaseros cat1 = new AnimalesCaseros("si");<br>
+		cat1.calculaSalud();<br>
+		System.out.println(cat1.getSalud());<br>
+		<br>
+		Gato cat = new Gato("Raquel",4,40.0);<br>
+		cat.calculaSalud();<br>
+		cat.calculaEdad();<br>
+		cat.calculaNombre();<br>
+		<br>
+		System.out.println(cat.getSalud());<br>
+		System.out.println("Su mascota tiene: "+cat.getEdad()+" años de edad°°");<br>
+		System.out.println(cat.getNombre());<br>
+		System.out.println("");<br>
+		System.out.println("");<br>
+		<br>
+		<br>
+		AnimalesGranja cou1 = new AnimalesGranja("si");<br>
+		cou1.calculaSalud();<br>
+		System.out.println(cou1.getSalud());<br>
+		<br>
+		Vaca cou = new Vaca("Lola",12,689.0);<br>
+		cou.calculaSalud();<br>
+		cou.calculaEdad();<br>
+		cou.calculaNombre();<br>
+		<br>
+		System.out.println(cou.getSalud());<br>
+		System.out.println("Su animal tiene: "+cou.getEdad()+" años de edad°°");<br>
+		System.out.println(cou.getNombre());<br>
+		System.out.println("");<br>
+		System.out.println("");<br>
+		<br>
+		<br>
+		AnimalesGranja Chiken1 = new AnimalesGranja("no");<br>
+		Chiken1.calculaSalud();<br>
+		System.out.println(Chiken1.getSalud());<br>
+		<br>
+		Pollo Chiken = new Pollo("Bartolito",3,4.0);<br>
+		Chiken.calculaSalud();<br>
+		Chiken.calculaEdad();<br>
+		Chiken.calculaNombre();<br>
+		<br>
+		System.out.println(Chiken.getSalud());<br>
+		System.out.println("Su animal tiene: "+Chiken.getEdad()+" años de edad°°");<br>
+		System.out.println(Chiken.getNombre());<br>
+		System.out.println("");<br>
+		System.out.println("");<br>
+		
+	}<br>
+}<br>
+<br>
+<br>	
+				</p>
+				<h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/Polimorfismo3.jpg " alt="Resultado">
+        <br><br>
+        <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaPolimorfismo3.jpg " alt="Diagrama">
+
+
+	</div>			
+ <style>
+        /* Estilos específicos para la clase .black-title */
+        .black-title {
+            color: #000; /* Color negro para el título "GETTERS AND SETTERS" */
+        }
+
+    </style>
+</div>
+		</body>
+	</html>

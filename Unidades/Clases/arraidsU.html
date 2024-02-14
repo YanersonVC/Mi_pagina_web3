@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	    <meta charset="UTF-8">
+    <title>Unidad 1</title>
+    <link rel="icon" href="../../Imagenes/Sistemas.ico">
+    <link rel="stylesheet" type="text/css" href="estiloClases.css">
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="../../Imagenes/UNC.png" alt="UNC">
+            <h1>UNC</h1>
+            <img class="logo" src="../../Imagenes/Sistemas.png" alt="Sistemas">
+        </div>
+    </nav>
+    <h2>Algoritmos y estructura de datos</h2>
+    <h3>Ingeniería de Sistemas</h3>
+    <h4>Grupo 6</h4>
+</header>
+
+<!-- Contenedor principal -->
+<div class="container">
+
+    <!-- Enlaces de navegación -->
+    <aside>
+        <a href="../unidad2.html">Volver</a><br><br><br>
+        <h1 class="black-title">ARRAIDS UNIDIMENCIONALES</h1><br>
+        <a href="#ejercicio1">Ejercicio 1</a><br>
+        <a href="#ejercicio2">Ejercicio 2</a><br>
+        <a href="#ejercicio3">Ejercicio 3</a><br><br>
+    </aside>
+
+		<h3><b>Introducción a Arraids Unidimencionales en la UNC:</b></h3>
+<br>
+En el ámbito de la programación y la gestión de datos, los arreglos unidimensionales juegan un papel crucial, especialmente en la Universidad Nacional de Cajamarca (UNC), donde la eficiencia en el manejo de información académica y administrativa es de suma importancia.<br>
+<br>
+Un arreglo unidimensional es una estructura de datos que almacena elementos del mismo tipo en una secuencia lineal. En la UNC, esta herramienta se convierte en un componente esencial para organizar y acceder a datos de manera eficiente, facilitando la implementación de sistemas informáticos que respondan a las necesidades específicas de la comunidad universitaria.<br>
+<br>
+Los arreglos unidimensionales son ampliamente utilizados en la UNC para gestionar datos de manera estructurada. Por ejemplo, podrían emplearse para almacenar calificaciones de estudiantes, registros de asistencia o información de cursos. La capacidad de acceder rápidamente a datos específicos a través de índices hace que los arreglos unidimensionales sean herramientas valiosas en sistemas académicos y administrativos.<br>
+<br>
+En la UNC, la implementación efectiva de arreglos unidimensionales contribuye a la organización eficiente de información, permitiendo el desarrollo de aplicaciones informáticas ágiles y adaptadas a las complejidades de la gestión universitaria.
+<br>
+<br>
+<br>
+	</p><br><br>
+    <div id="ejercicio1">
+        <h3><b>Ejercicio 1: </b></h3>
+        <p>
+ 
+<h3><b>Clase Principal:</b></h3>
+<br>
+<br>
+package vectores;<br>
+import java.util.Scanner;<br>
+public class Ejemplo1 {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		Scanner sc = new Scanner(System.in);<br>
+		<br>
+		System.out.println("Ingresa el numero de elementos que desea(1 - 4):");<br>
+		int n = sc.nextInt();<br>
+		<br>
+		int [] v = new int [n];<br>
+		// leer vector<br>
+		for (int i=0 ; i < v.length ; i++)<br>
+		{<br>
+			System.out.println("v ["+(i+1)+"]=");<br>
+			v[i]=sc.nextInt();<br>
+		}<br>
+		//Mostrar vector<br>
+		System.out.println("");<br>
+		<br>
+		for (int i=0 ; i < v.length ; i++)<br>
+		{<br>
+			System.out.print(v[i]+"/t");<br>
+		}<br>
+		//Generar vector<br>
+		for(int i=0;  i< v.length; i++)<br>
+		{<br>
+			v[i]= (int) (Math.random()*50);<br>
+		}<br>
+	}<br>
+}<br>
+<br>
+<br>
+        </p>
+        <h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/ArraidsU1.jpg " alt="Resultado">
+         <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaArraidsU1.jpg " alt="Diagrama">
+    </div>
+
+     <div id="ejercicio1">	
+			<h3 id="ejercicio2"><b>Ejercicio 2: </b></h3>
+				<p>   
+
+package vectores;<br>
+public class Ejemplo2 {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		String nombre = "Rosa";<br>
+		String apellido = "Morales";<br>
+		<br>
+		String nombreCompleto = String.format("%s %s",nombre,apellido);<br>
+		System.out.println(nombreCompleto);<br>
+	}<br>
+}<br>
+<br>
+				</p>
+				<h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/ArraidsU2.jpg " alt="Resultado">
+ <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaArraidsU2.jpg " alt="Diagrama">
+
+    </div>
+
+     <div id="ejercicio1">
+			<h3 id="ejercicio3"><b>Ejercicio 3: </b></h3>
+				<p>   
+package ARRAYS;<br>
+import java.security.SecureRandom;<br>
+public class Ejemplo3 {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		<br>
+		SecureRandom r = new SecureRandom();<br>
+		int [] v = new int [7];<br>
+		<br>
+		for (int i = 1 ; i <=60000; i++)<br>
+		{<br>
+			v[1+r.nextInt(6)]++;<br>
+		}<br>
+		//mostrar cada elemento del vector<br>
+		<br>
+		for(int cara = 1 ; cara< v.length;cara++)<br>
+		{<br>
+			System.out.printf("%4d%12d%n",cara,v[cara]);<br>
+		}<br>
+	}<br>
+}<br>
+<br>
+				</p>
+				<h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/ArraidsU3.jpg " alt="Resultado">
+ <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaArraidsU3.jpg " alt="Diagrama">
+
+	</div>			
+ <style>
+        /* Estilos específicos para la clase .black-title */
+        .black-title {
+            color: #000; /* Color negro para el título "GETTERS AND SETTERS" */
+        }
+
+    </style>
+</div>
+		</body>
+	</html>

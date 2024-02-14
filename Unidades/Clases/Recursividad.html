@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+    <title>Unidad 1</title>
+    <link rel="icon" href="../../Imagenes/Sistemas.ico">
+    <link rel="stylesheet" type="text/css" href="estiloClases.css">
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="../../Imagenes/UNC.png" alt="UNC">
+            <h1>UNC</h1>
+            <img class="logo" src="../../Imagenes/Sistemas.png" alt="Sistemas">
+        </div>
+    </nav>
+    <h2>Algoritmos y estructura de datos</h2>
+    <h3>Ingeniería de Sistemas</h3>
+    <h4>Grupo 6</h4>
+</header>
+
+<!-- Contenedor principal -->
+<div class="container">
+
+    <!-- Enlaces de navegación -->
+    <aside>
+        <a href="../unidad2.html">Volver</a><br><br><br>
+        <h1 class="black-title">Recursividad</h1><br>
+        <a href="#ejercicio1">Ejercicio 1</a><br>
+        <a href="#ejercicio2">Ejercicio 2</a><br>
+        <a href="#ejercicio3">Ejercicio 3</a><br><br>
+    </aside>
+
+		<h3><b>Introducción a Recursividad en la UNC:</b></h3>
+<br>
+En el ámbito de la programación, la recursividad emerge como un concepto poderoso y versátil, particularmente significativo en la Universidad Nacional de Córdoba (UNC), donde la resolución eficiente de problemas y la optimización de algoritmos son esenciales.
+<br>
+La recursividad es un enfoque en programación donde una función se llama a sí misma para resolver un problema de manera más simple. En la UNC, esta técnica se convierte en un recurso valioso para abordar desafíos académicos y administrativos que requieren soluciones escalables y estructuras de código claras.<br>
+<br>
+En la UNC, la recursividad se aplica para resolver problemas complejos que pueden descomponerse en instancias más pequeñas del mismo problema. Por ejemplo, en aplicaciones académicas, la recursividad podría utilizarse para calcular de manera eficiente la jerarquía de dependencias en la programación de cursos o para gestionar estructuras de datos complejas, como árboles genealógicos de profesores y estudiantes.<br>
+<br>
+La recursividad, en la UNC, se convierte en una herramienta clave para desarrollar algoritmos eficientes y soluciones que se adaptan a la complejidad de los procesos académicos y administrativos. Su aplicación estratégica contribuye a la optimización de software y a la resolución efectiva de problemas en la universidad.<br>
+
+<br>
+<br>
+	</p><br><br>
+    <div id="ejercicio1">
+        <h3><b>Ejercicio 1: </b></h3>
+        <p>
+ 
+<h3><b>Primera clase:</b></h3>
+<br>
+<br>
+package recursividad1;<br>
+public class Ej1 {<br>
+    public void  mostrar (int x) {<br>
+        <br>
+        if(x<=10) {<br>
+        System.out.println(x+" ");<br>
+        mostrar(x+1);<br>
+        }<br>
+    }<br>
+}<br>
+<br>
+<h3><b>Clase Main:</b></h3>
+<br>
+package recursividad1;<br>
+public class Ej1Main {<br>
+    public static void main(String[] args) {<br>
+        // TODO Auto-generated method stub<br>
+        Ej1 rec = new Ej1 ();<br>
+        rec.mostrar(1); <br>
+    }<br>
+}<br>
+
+<br>
+<br>
+        </p>
+        <h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/recursividad1.jpg " alt="Resultado">
+          <h4><i><b>Diagrama: </b></i></h4>
+            <img class="Diagrama" src="../../Imagenes/DiagramaRecursividad1.jpg " alt="Diagrama">
+
+     <div id="ejercicio1">	
+			<h3 id="ejercicio2"><b>Ejercicio 2: </b></h3>
+				<p>  
+                    <h3><b>Primera clase:</b></h3>
+<br>
+<br>
+package ContarDigitos;<br>
+public class recursividad {<br>
+    public int Contardigitos(int n) {<br>
+        <br>
+        int res;<br>
+        if(n<=10) {<br>
+            res=1;<br>
+        }<br>
+        else {<br>
+            n=n/10;<br>
+            res=1+ Contardigitos(n);<br>
+        }<br>
+        return res;<br>
+    }<br>
+}<br>
+    <h3><b>Clase Main:</b></h3>
+<br><br>
+
+package ContarDigitos;<br>
+import java.util.Scanner;<br>
+public class MainRecursividad {<br>
+    public static void main(String[] args) {<br>
+        // TODO Auto-generated method stub<br>
+        Scanner sc = new Scanner(System.in);<br>
+        <br>
+        System.out.println("Ingrese un número:");<br>
+        int numero = sc.nextInt();<br>
+        <br>
+        recursividad rec = new recursividad ();<br>
+        int recursividad = rec.Contardigitos(numero);<br>
+        <br>
+        System.out.println("El número de digitos = "+ rec.Contardigitos(numero));<br>
+        <br>
+    }<br>
+}<br>
+
+<br><br>
+            </p>
+				<h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/recursividad2.jpg " alt="Resultado">
+          <h4><i><b>Diagrama: </b></i></h4>
+            <img class="Diagrama" src="../../Imagenes/DiagramaRecursividad2.jpg " alt="Diagrama">
+ <img class="Diagrama" src="../../Imagenes/DiagramaRecursividad22.jpg " alt="Diagrama">
+    </div>
+
+     <div id="ejercicio1">
+			<h3 id="ejercicio3"><b>Ejercicio 3: </b></h3>
+				<p>   
+<h3><b>Primera clase:</b></h3>
+<br>
+package ContarDigitos;<br>
+public class Division {<br>
+    public int division(int n, int z) {<br>
+        int res = 0;<br>
+        if(z==0) {<br>
+            res=-1;<br>
+        }<br>
+        else {<br>
+            if (n >= z) {<br>
+                int resultado = n-z;<br>
+                System.out.println(n + " - " + z + " = " + resultado);<br>
+                n = n - z;<br>
+                res = 1 + division(n, z);<br>
+            }<br>
+        }<br>
+        return res;<br>
+    }<br>
+}<br>
+
+<br>
+
+<h3><b>Clase Main:</b></h3>
+<br><br>
+package ContarDigitos;<br>
+import java.util.Scanner;<br>
+public class DivisionMain {<br>
+   public static void main(String[] args) {<br>
+       Scanner sc = new Scanner(System.in);<br>
+       System.out.println("Ingrese el numero que quiere dividir: ");<br>
+       int numero = sc.nextInt();<br>
+       System.out.println("Ingrese el numero divisor: ");<br>
+       int divisor = sc.nextInt();<br>
+       Division fac = new Division();<br>
+       int division = fac.division(numero, divisor);<br>
+      <br>
+       if(division==-1) {<br>
+        System.out.println("No se puede dividir :(");<br>
+       }<br>
+       else {<br>
+       System.out.println(" ");<br>
+       System.out.println(numero+"/"+divisor+" = "+division);<br>
+       System.out.println("Se pudo restar " + division + " veces ");<br>
+       }<br>
+   }<br>
+}<br>
+<br>
+
+<br>
+                </p>
+				<h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/recursividad3.jpg " alt="Resultado">
+          <h4><i><b>Diagrama: </b></i></h4>
+            <img class="Diagrama" src="../../Imagenes/DiagramaRecursividad3.jpg " alt="Diagrama">
+
+	</div>			
+ <style>
+        /* Estilos específicos para la clase .black-title */
+        .black-title {
+            color: #000; /* Color negro para el título "GETTERS AND SETTERS" */
+        }
+
+    </style>
+</div>
+		</body>
+	</html>

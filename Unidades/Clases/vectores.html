@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 1</title>
+    <link rel="icon" href="../../Imagenes/Sistemas.ico">
+    <link rel="stylesheet" type="text/css" href="estiloClases.css">
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="../../Imagenes/UNC.png" alt="UNC">
+            <h1>UNC</h1>
+            <img class="logo" src="../../Imagenes/Sistemas.png" alt="Sistemas">
+        </div>
+    </nav>
+    <h2>Algoritmos y estructura de datos</h2>
+    <h3>Ingeniería de Sistemas</h3>
+    <h4>Grupo 6</h4>
+</header>
+
+<!-- Contenedor principal -->
+<div class="container">
+
+    <!-- Enlaces de navegación -->
+    <aside>
+        <a href="../unidad2.html">Volver</a><br><br><br>
+        <h1 class="black-title">VECTORES</h1><br>
+        <a href="#ejercicio1">Ejercicio 1</a><br>
+        <a href="#ejercicio2">Ejercicio 2</a><br>
+        <a href="#ejercicio3">Ejercicio 3</a><br><br>
+    </aside>
+
+		<h3><b>Introducción a Vectores en la UNC:</b></h3>
+<br>
+
+
+<br>
+<br>
+	</p><br><br>
+    <div id="ejercicio1">
+        <h3><b>Ejercicio 1: </b></h3>
+        <p>
+ 
+<h3><b>Primera clase:</b></h3>
+<br>
+<br>
+package EJERCICIOS;<br>
+import java.util.Vector;<br>
+public class ClaseVector {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		Vector v = new Vector();<br>
+		<br>
+		Vector <Integer> B = new Vector();<br>
+		<br>
+		v.addElement(2);<br>
+		v.addElement("hola");<br>
+		v.addElement('S');<br>
+		<br>
+		//Mostrar elementos<br>
+		<br>
+		for(int i=0; i< v.size();i++) {<br>
+			<br>
+			System.out.println(v.get(i));<br>
+		}<br>
+		<br>
+		System.out.println(" ");<br>
+		//Trabajamos en el vector B<br>
+		B.addElement(3);<br>
+		B.addElement(8);<br>
+		B.addElement(9);<br>
+		<br>
+		//Mostrar elementos de B<br>
+		<br>
+for(int i=0; i< B.size();i++) {<br>
+			<br>
+			System.out.println(B.get(i));<br>
+		}<br>
+	}<br>
+	<br>
+	
+}<br>
+<br>
+<br>
+        </p>
+        <h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/Vectores1.jpg " alt="Resultado">
+    </div>
+
+     <div id="ejercicio1">	
+			<h3 id="ejercicio2"><b>Ejercicio 2: </b></h3>
+				<p>   
+package EJERCICIOS;<br>
+import java.util.Scanner;<br>
+public class ClaseMatriz {<br>
+	static int [][] matriz1 = null; // para usar dentro del main o dentro de otros métodos<br>
+									// null porque necesito que el usuario defina un numero<br>
+	static Scanner sc = new Scanner(System.in);<br>
+	<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		matriz1 = DefinirTamano(matriz1);<br>
+		System.out.println("Filas: "+ matriz1.length);<br>
+		System.out.println("Columnas: "+ matriz1[0].length);<br>
+		<br>
+		System.out.println(" ");<br>
+		<br>
+		IngresarValor(matriz1);<br>
+		System.out.println(" ");<br>
+		ImprimirMatriz(matriz1);<br>
+	}<br>
+	public static int [][]DefinirTamano(int [][] x){<br>
+		System.out.println("Igrese el tamaño de la matriz(filas&Columnas): ");<br>
+		String datosIngresados = sc.next();//Captura los datos ingresados<br>
+		String [] datos = datosIngresados.split("&");//Para que el vector se almacene en 2 elementos(filas y columnas)<br>
+		<br>
+		int filas = Integer.parseInt(datos[0]);//Convertir de cadena a entero<br>
+		int columnas = Integer.parseInt(datos[1]);<br>
+		x = new int [filas][columnas];<br>
+		return x;<br>
+	}<br>
+	<br>
+	public static void IngresarValor(int [][] x ) {<br>
+		System.out.println("Valores de la matriz: ");<br>
+		for(int i=0; i< x.length; i++) {<br>
+			for(int j=0; j< x.length; j++) {//hasta el contenido de la matriz<br>
+				x[i][j] = Integer.parseInt(sc.next()); // convertir a entero<br>
+				<br>
+			}<br>
+			<br>
+		}<br>
+	}<br>
+	
+	public static void ImprimirMatriz(int [][]x) {<br>
+		for (int i= 0 ; i< x.length;i++) {<br>
+			System.out.println(" ");<br>
+			for (int j= 0 ; j< x[i].length;j++) {<br>
+				System.out.print(" V["+x[i][j]+"] ");<br>
+			}<br>
+			System.out.println(" ");<br>
+		}<br>
+	}<br>
+}<br>
+<br>
+				</p>
+				<h4><i><b>Resultado: </b></i></h4>
+ <img class="Resultado" src="../../Imagenes/Vectores2.jpg " alt="Resultado">
+
+    </div>
+
+     <div id="ejercicio1">
+			<h3 id="ejercicio3"><b>Ejercicio 3: </b></h3>
+				<p>   
+
+				</p>
+				<h4><i><b>Resultado: </b></i></h4>
+ <img class="Resultado" src="../../Imagenes/Vectores3.jpg " alt="Resultado">
+
+	</div>			
+ <style>
+        /* Estilos específicos para la clase .black-title */
+        .black-title {
+            color: #000; /* Color negro para el título "GETTERS AND SETTERS" */
+        }
+
+    </style>
+</div>
+		</body>
+	</html>

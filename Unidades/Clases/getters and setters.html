@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	    <meta charset="UTF-8">
+    <title>Unidad 1</title>
+    <link rel="icon" href="../../Imagenes/Sistemas.ico">
+    <link rel="stylesheet" type="text/css" href="estiloClases.css">
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="../../Imagenes/UNC.png" alt="UNC">
+            <h1>UNC</h1>
+            <img class="logo" src="../../Imagenes/Sistemas.png" alt="Sistemas">
+        </div>
+    </nav>
+    <h2>Algoritmos y estructura de datos</h2>
+    <h3>Ingeniería de Sistemas</h3>
+    <h4>Grupo 6</h4>
+</header>
+
+<!-- Contenedor principal -->
+<div class="container">
+
+    <!-- Enlaces de navegación -->
+    <aside>
+        <a href="../unidad1.html">Volver</a><br><br><br>
+        <h1 class="black-title">GETTERS AND SETTERS</h1><br>
+        <a href="#ejercicio1">Ejercicio 1</a><br>
+        <a href="#ejercicio2">Ejercicio 2</a><br>
+        <a href="#ejercicio3">Ejercicio 3</a><br><br>
+    </aside>
+
+		<h3><b>Introducción a Getters y Setters en la UNC:</b></h3>
+<br>
+En el desarrollo de software, los getters y setters son elementos esenciales en la manipulación y gestión de datos, con aplicaciones específicas que adquieren relevancia en la enseñanza en la la escuela de ING. SISTEMAS en la Universidad Nacional de Cajamarca (UNC).<br>
+<br>
+Los getters y setters son métodos utilizados para acceder y modificar los atributos de un objeto, respectivamente. En el contexto de la UNC, donde la eficiencia en la gestión de información es crucial, la implementación adecuada de getters y setters permite un control más preciso sobre los datos académicos, facilitando el acceso y la modificación de información de manera segura.<br>
+<br>
+En el entorno universitario, la utilización de getters y setters se orienta hacia la creación de sistemas informáticos que gestionen de manera efectiva datos académicos, como calificaciones, horarios y registros estudiantiles. Estos métodos proporcionan una capa de abstracción que mejora la modularidad del código, permitiendo una adaptación más ágil a los cambios en los procesos académicos y administrativos de la UNC.<br>
+<br>
+En resumen, en la UNC, la implementación cuidadosa de getters y setters no solo asegura la integridad y seguridad de los datos, sino que también contribuye a la eficiencia y adaptabilidad de los sistemas informáticos que respaldan las actividades académicas y administrativas en la universidad.<br>
+<br>
+<br>
+	</p><br><br>
+    <div id="ejercicio1">
+        <h3><b>Ejercicio 1: </b></h3>
+        <p>
+ 
+<h3><b>Primera clase:</b></h3>
+<br>
+
+package ciclo2;<br>
+public class automovil1 {<br>
+	int precio = 0;<br>
+	String nombre = " ";<br>
+	int numerodepasajeros = 0;<br>
+	String color = " ";<br><br>
+	
+	public automovil1(int precio, String nombre) {<br>
+		super();<br>
+		this.precio = precio;<br>
+		this.nombre = nombre;<br>
+		<br>
+			 System.out.println("El precio: "+precio+ "; el nombre es : "+nombre);<br>
+		<br>
+	}<br>
+	<br>
+	<br>
+	<br>
+	public automovil1(int precio, String nombre, int numerodepasajeros) {<br>
+		super();<br>
+		this.precio = precio;<br>
+		this.nombre = nombre;<br>
+		this.numerodepasajeros = numerodepasajeros;<br>
+		<br>
+			 System.out.println("El precio: "+precio+ "; el nombre es : "+nombre+"; Pasajeros: "+numerodepasajeros);<br>
+	}<br>
+	public automovil1(int precio, String nombre, int numerodepasajeros, String color) {<br>
+		super();<br>
+		this.precio = precio;<br>
+		this.nombre = nombre;<br>
+		this.numerodepasajeros = numerodepasajeros;<br>
+		this.color = color;<br>
+		<br>
+		 System.out.println("El precio: "+precio+ " ; el nombre es : "+nombre+" ; Pasajeros: "+numerodepasajeros+" ; color : "+color);<br>
+	}<br>
+	<br>
+}<br>
+<br>
+<h3><b>Clase Main:</b></h3>
+<br>
+package ciclo2;<br>
+public class main1 {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		automovil1 d1 = new automovil1 (8000,"Toyota",50,"negro");<br>
+		<br>
+	}<br>
+}<br>
+<br>
+<br>
+        </p>
+        <h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/getters1.jpg" alt="Resultado">
+         <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaSobrecarga.jpg " alt="Diagrama">
+    </div>
+
+     <div id="ejercicio1">	
+			<h3 id="ejercicio2"><b>Ejercicio 2: </b></h3>
+				<p>   </p>
+				<h4><i><b>Resultado: </b></i></h4>
+
+
+    </div>
+
+     <div id="ejercicio1">
+			<h3 id="ejercicio3"><b>Ejercicio 3: </b></h3>
+				<p>   </p>
+				<h4><i><b>Resultado: </b></i></h4>
+
+
+	</div>			
+ <style>
+        /* Estilos específicos para la clase .black-title */
+        .black-title {
+            color: #000; /* Color negro para el título "GETTERS AND SETTERS" */
+        }
+
+    </style>
+</div>
+		</body>
+	</html>

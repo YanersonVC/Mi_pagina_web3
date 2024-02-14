@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	    <meta charset="UTF-8">
+    <title>Unidad 1</title>
+    <link rel="icon" href="../../Imagenes/Sistemas.ico">
+    <link rel="stylesheet" type="text/css" href="estiloClases.css">
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="../../Imagenes/UNC.png" alt="UNC">
+            <h1>UNC</h1>
+            <img class="logo" src="../../Imagenes/Sistemas.png" alt="Sistemas">
+        </div>
+    </nav>
+    <h2>Algoritmos y estructura de datos</h2>
+    <h3>Ingeniería de Sistemas</h3>
+    <h4>Grupo 6</h4>
+</header>
+
+<!-- Contenedor principal -->
+<div class="container">
+
+    <!-- Enlaces de navegación -->
+    <aside>
+        <a href="../unidad1.html">Volver</a><br><br><br>
+        <h1 class="black-title">HERENCIA</h1><br>
+        <a href="#ejercicio1">Ejercicio 1</a><br>
+        <a href="#ejercicio2">Ejercicio 2</a><br>
+        <a href="#ejercicio3">Ejercicio 3</a><br><br>
+    </aside>
+
+		<h3><b>Introducción a Herencia en la UNC:</b></h3>
+<br>
+En el desarrollo de software, el concepto de herencia es esencial para estructurar y organizar el código de manera eficiente. En la Universidad Nacional de Cajamarca (UNC), donde la gestión de información académica y la adaptabilidad de los sistemas informáticos son cruciales, la herencia se convierte en un componente clave y mejora la enseñanza en la escuela de ING. SISTEMAS.<br>
+<br>
+La herencia es un principio de la programación orientada a objetos que permite la creación de nuevas clases basadas en clases existentes, heredando sus atributos y métodos. En la UNC, esta capacidad de construir sobre estructuras ya establecidas se traduce en la creación de sistemas informáticos más robustos y adaptados a las complejidades de la gestión académica y administrativa.<br>
+<br>
+La herencia facilita la creación de jerarquías de clases que reflejan la estructura de la información en la UNC. Por ejemplo, en sistemas académicos, la herencia puede ser empleada para representar distintos tipos de usuarios, como estudiantes, profesores y personal administrativo, compartiendo características comunes y permitiendo la extensión de funcionalidades específicas.<br>
+<br>
+En la UNC, la herencia se utiliza estratégicamente para promover la reutilización del código, mejorar la claridad y mantenibilidad, y adaptar los sistemas informáticos a las cambiantes necesidades académicas y administrativas, contribuyendo así a la eficiencia y flexibilidad de las aplicaciones desarrolladas.<br>
+<br>
+<br>
+	</p><br><br>
+    <div id="ejercicio1">
+        <h3><b>Ejercicio 1: </b></h3>
+        <p>
+ 
+<h3><b>Clase Padre:</b></h3>
+<br>
+<br>
+package herencia;<br>
+public class vehiculo {<br>
+	public String color;<br>
+	public String modelo;<br>
+	public char placa;<br>
+	<br>
+	public void acelerar () {<br>
+		<br>
+		System.out.println("El vehiculo esta avanzando ");<br>
+		<br>
+	}<br>
+	<br>
+	public void frenar () {<br>
+		<br>
+		System.out.println("El vehiculo se ha detenido ");<br>
+		<br>
+	}<br>
+	<br>
+	public void cambiarvelocidad () {<br>
+		<br>
+		System.out.println("El vehiculo esta cambiando su velocidad ");<br>
+		<br>
+	}<br>
+}<br>
+<br>
+<h3><b>Clase Hija 1:</b></h3>
+<br>
+package herencia;<br>
+public class automovil1 extends vehiculo{<br>
+}<br>
+<br>
+<br>
+<h3><b>Clase Hija 2:</b></h3>
+<br> 
+package herencia;<br>
+public class camion extends vehicu<br>
+
+<br>
+<h3><b>Clase Hija 3:</b></h3>
+<br>
+package herencia;<br>
+public class motocicleta extends vehiculo{<br>
+}<br>
+
+<br>
+<h3><b>Clase Main:</b></h3>
+<br>
+package herencia;<br>
+public class mainVehiculo {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		camion troca = new camion();<br>
+		troca.acelerar();<br>
+		<br>
+		automovil1 trans = new automovil1 ();<br>
+		trans.cambiarvelocidad();<br>
+		<br>
+		motocicleta tri = new motocicleta ();<br>
+		tri.frenar();<br>
+		<br>
+		<br>
+	}<br>
+}<br>
+
+<br>
+<br>
+        </p>
+        <h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/ResultadoHerencia.jpg " alt="Resultado">
+        <br><br>
+        <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaHerencia.jpg " alt="Diagrama">
+    </div>
+
+     <div id="ejercicio1">	
+			<h3 id="ejercicio2"><b>Ejercicio 2: </b></h3>
+				<p> 
+<h3><b>Clase Padre:</b></h3>
+<br>
+<br>
+package herencia;<br>
+public class vehiculo {<br>
+	public String color;<br>
+	public String modelo;<br>
+	public char placa;<br>
+	<br>
+	public void acelerar () {<br>
+		<br>
+		System.out.println("El vehiculo esta avanzando ");<br>
+		<br>
+	}<br>
+	<br>
+	public void frenar () {<br>
+		<br>
+		System.out.println("El vehiculo se ha detenido ");<br>
+		<br>
+	}<br>
+	<br>
+	public void cambiarvelocidad () {<br>
+		<br>
+		System.out.println("El vehiculo esta cambiando su velocidad ");<br>
+		<br>
+	}<br>
+}<br>
+<br>
+<h3><b>Clase Hija 1:</b></h3>
+<br>
+package herencia;<br>
+public class automovil2 extends vehiculo{<br>
+	private int pasajeros;<br>
+	//Constructor<br>
+	<br>
+	public automovil2(int pasajeros) {<br>
+		super();<br>
+		this.pasajeros = pasajeros;<br>
+	}<br>
+	<br>
+	public void modoManejo () {<br>
+		<br>
+		System.out.println("Auto en modo de manejo: Sport ");<br>
+	}<br>
+}<br>
+
+<br>
+<h3><b>Clase Main:</b></h3>
+<br>
+package herencia;<br>
+public class Main3 {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		automovil2 aut2 = new automovil2(200);<br>
+		<br>
+		aut2.acelerar();<br>
+		aut2.cambiarvelocidad();<br>
+		aut2.frenar();<br>
+		aut2.modoManejo();<br>
+		<br>
+	}<br>
+}<br>
+
+
+<br>
+<br>
+				</p>
+				<h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/Herencia2.jpg " alt="Resultado">
+        <br><br>
+        <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaHerencia2.jpg " alt="Diagrama">
+    </div>
+
+     <div id="ejercicio1">
+			<h3 id="ejercicio3"><b>Ejercicio 3: </b></h3>
+				<p>  
+<h3><b>Clase Padre:</b></h3>
+<br>
+package herencia;<br>
+public class mascotas {<br>
+	public String raza;<br>
+	public String nombre;<br>
+	public String color;<br>
+	//Constructor: Este constructor se genera después de generar el constructor<br>
+		//en la clase hijo<br>
+		<br>
+		<br>
+	<br>
+	public void correr () {<br>
+		<br>
+		System.out.println("La mascota esta corriendo");<br>
+	}<br>
+	<br>
+	public mascotas() {<br>
+		super();<br>
+		// TODO Auto-generated constructor stub<br>
+	}<br>
+	public void dormir () {<br>
+		System.out.println("La mascota esta durmiendo");<br>
+		<br>
+	}<br>
+	<br>
+	public void comer () {<br>
+		System.out.println("La mascota esta comiendo");<br>
+	}<br>
+	
+}<br>
+
+<br>
+<h3><b>Clase Hija 1:</b></h3>
+<br>
+package herencia;<br>
+public class perro extends mascotas{<br>
+	<br>
+	private String vacunas;<br>
+	<br>
+	public void ladrar () {<br>
+		<br>
+		System.out.println("Nombre de la mascota: "+nombre);<br>
+		System.out.println("Raza de la mascota: "+raza);<br>
+		System.out.println("Color de pelo: "+color);<br>
+		System.out.println("La mascota "+this.vacunas+" cuenta con todas sus vacunas");<br>
+	}<br>
+	<br>
+	//Constructor clase hijo<br>
+	public perro(String raza, String nombre, String color, String vacunas) {<br>
+		<br>
+		// TODO Auto-generated constructor stub<br>
+		this.nombre=nombre;<br>
+		this.raza=raza;<br>
+		this.vacunas=vacunas;<br>
+}<br>
+<br>
+<br>
+<h3><b>Clase Hija 2:</b></h3>
+<br> 
+package herencia;<br> 
+public class gato extends mascotas {<br> 
+	
+private String vacunas;<br> 
+	<br> 
+	public void maullar () {<br> 
+		<br> 
+		System.out.println("Nombre de la mascota: "+nombre);<br> 
+		System.out.println("Raza de la mascota: "+raza);<br> 
+		System.out.println("Color de pelo: "+color);<br> 
+		System.out.println("La mascota "+this.vacunas+" cuenta con todas sus vacunas");<br> 
+	}<br> 
+	//Constructor clase hijo<br> 
+	public gato(String raza, String nombre, String color, String vacunas) {<br> 
+		// TODO Auto-generated constructor stub<br> 
+		this.nombre=nombre;<br> 
+		this.color=color;<br> 
+		this.raza=raza;<br> 
+		this.vacunas=vacunas;<br> 
+	}<br> 
+			
+				
+}<br> 
+<br>
+<h3><b>Clase Main:</b></h3>
+<br>
+package herencia;<br>
+public class MainMascotas {<br>
+	public static void main(String[] args) {<br>
+		// TODO Auto-generated method stub<br>
+		perro dog = new perro ("Yosmer","peruano","negro","si");<br>
+	<br>
+		dog.ladrar();<br>
+		dog.correr();<br>
+		dog.dormir();<br>
+		dog.comer();<br>
+		<br>
+		gato cat = new gato ("Patroclo","Siames","Blanco","si");<br>
+		<br>
+		cat.maullar();<br>
+		cat.correr();<br>
+		cat.dormir();<br>
+		cat.comer();<br>
+		<br>
+		
+	}<br>
+}<br>
+<br>
+<br>
+				</p>
+				<h4><i><b>Resultado: </b></i></h4>
+        <img class="Resultado" src="../../Imagenes/Herencia3.jpg " alt="Resultado">
+        <br><br>
+        <h4><i><b>Diagrama de flujo: </b></i></h4>
+       	<img class="Diagrama" src="../../Imagenes/DiagramaHerencia3.jpg " alt="Diagrama">
+	</div>			
+ <style>
+        /* Estilos específicos para la clase .black-title */
+        .black-title {
+            color: #000; /* Color negro para el título "GETTERS AND SETTERS" */
+        }
+
+    </style>
+</div>
+		</body>
+	</html>
